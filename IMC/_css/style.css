@@ -1,0 +1,58 @@
+/* CSS DOCUMENT */
+
+/* Fonte importada do https://fonts.google.com/specimen/Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+/* RESET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(25, 97, 153);
+}
+
+main {
+    width: 50vw;
+    height: auto;
+    padding: 10px;
+}
+
+main form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+main form h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #fefefe;
+    margin-bottom: 10px;
+
+}
+main form input,div {
+    border: none;
+    height: 35px;
+    margin-bottom: 5px;
+    border-radius: 2px;
+    text-indent: 5px;
+    outline: none;
+    color: #888;
+}
+
+div {
+    background-color: #fff;
+}
+
+main form input[type="submit"] {
+    background-color: rgb(2, 43, 75);
+    color: #fff;
+    cursor: pointer;
+}
