@@ -36,5 +36,5 @@ function calculoIMC() {
     }
 }
 
-// Eventos para chamar as funções calculoIMC() e limpaResultado()
+// Eventos para chamar a função calculoIMC()
 botaoCalcular.addEventListener('click',calculoIMC);
