@@ -1,13 +1,40 @@
 // Selecionando os elementos HTML
-let campoResultado = document.getElementById("campoResultado");
+let campoResultadoIMC = document.getElementById("campoResultadoIMC");
+let campoResultadoSituacao = document.getElementById("campoResultadoSituacao");
 let campoPeso = document.getElementById("campoPeso");
 let campoAltura = document.getElementById("campoAltura");
 let botaoCalcular = document.getElementById("botaoCalcular");
 
-// Evento para chamar a função que irá calcular o IMC
-botaoCalcular.addEventListener('click',calculoIMC);
-
 // Função que calcular o IMC
 function calculoIMC() {
-    
+    peso = Number(campoPeso.value);
+    altura = Number(campoAltura.value);
+    imc_resultado = (peso/(altura*2));
+
+    if(imc_resultado < 18.5) {
+        campoResultadoIMC.innerText = imc_resultado.toFixed(3);
+        campoResultadoSituacao.innerText = "ABAIXO DO PESO";
+    }
+    else if((imc_resultado >= 18.5) && (imc_resultado <= 24.9)) {
+        campoResultadoIMC.innerText = imc_resultado.toFixed(3);
+        campoResultadoSituacao.innerText = "PESO NORMAL";
+    }
+    else if((imc_resultado >= 25) && (imc_resultado <= 29.9)) {
+        campoResultadoIMC.innerText = imc_resultado.toFixed(3);
+        campoResultadoSituacao.innerText = "SOBREPESO";
+    }
+    else if((imc_resultado >= 30) && (imc_resultado <= 34.9)) {
+        campoResultadoIMC.innerText = imc_resultado.toFixed(3);
+        campoResultadoSituacao.innerText = "OBESIDADE GRAU I";
+    }
+    else if((imc_resultado >= 35) && (imc_resultado <= 39.9)) {
+        campoResultadoIMC.innerText = imc_resultado.toFixed(3);
+        campoResultadoSituacao.innerText = "OBESIDADE GRAU II";
+    }else {
+        campoResultadoIMC.innerText = imc_resultado.toFixed(3);
+        campoResultadoSituacao.innerText = "OBESIDADE GRAU III";
+    }
 }
+
+// Eventos para chamar as funções calculoIMC() e limpaResultado()
+botaoCalcular.addEventListener('click',calculoIMC);
