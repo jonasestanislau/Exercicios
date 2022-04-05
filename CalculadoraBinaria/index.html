@@ -13,45 +13,18 @@
     </header>
     <main>
         <form>
-            <input type="text" id="valor" placeholder="0-255">
-            <div id="resultado"></div>
-            <button id="btn" onclick="converte()" type="button">Calcular</button>
+            <input type="text" id="campoNumero" placeholder="Digite um número:">
+            <fieldset>
+                <legend>Opções de conversão</legend>
+                <label for="convertBIN">
+                    <input type="button" name="optionConvert" id="convertBIN" class="radioButtons" onclick="binario()" value="Binário">
+                </label>
+            </fieldset>
+            <input type="text" placeholder="Resultado" id="campoResultado">
         </form>
     </main>
-    <script>
-        function converte() {
-            let valor = document.getElementById('valor');
-            let resultado = document.getElementById('resultado');
+    <script> 
 
-            let campoValor = Number(valor.value);
-            let campoRes = Number(resultado.value);
-            let bin = campoValor.toString(16);
-            if(bin != Number) {
-                resultado.innerText = bin.toUpperCase();
-            }
-            else {
-                resultado.innerText = bin;
-            }
-        }
-
-        /*
-            colocar: 
-            - campo para digitar o numero
-            - campo para exibir o resultado
-            - radios buttons [BIN, OCT, DEC, HEX], onde esses vão alterar os valores a serem exibidos
-            -> verificações
-               - o campo não pode ser vázio
-               - não pod ser negativo
-               - colocar um total mínimo de caracteres para o campo
-
-        */
-
-
-
-
-        console.log(valor)
-        console.log(resultado)
-        // console.log(botao)
     </script>
 </body>
 </html>
