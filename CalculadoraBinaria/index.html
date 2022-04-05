@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora binária</title>
+    <link rel="stylesheet" href="_css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Calculadora binária</h1>
+    </header>
+    <main>
+        <form>
+            <input type="text" id="valor" placeholder="0-255">
+            <div id="resultado"></div>
+            <button id="btn" onclick="converte()" type="button">Calcular</button>
+        </form>
+    </main>
+    <script>
+        function converte() {
+            let valor = document.getElementById('valor');
+            let resultado = document.getElementById('resultado');
+
+            let campoValor = Number(valor.value);
+            let campoRes = Number(resultado.value);
+            let bin = campoValor.toString(16);
+            if(bin != Number) {
+                resultado.innerText = bin.toUpperCase();
+            }
+            else {
+                resultado.innerText = bin;
+            }
+        }
+
+        /*
+            colocar: 
+            - campo para digitar o numero
+            - campo para exibir o resultado
+            - radios buttons [BIN, OCT, DEC, HEX], onde esses vão alterar os valores a serem exibidos
+            -> verificações
+               - o campo não pode ser vázio
+               - não pod ser negativo
+               - colocar um total mínimo de caracteres para o campo
+
+        */
+
+
+
+
+        console.log(valor)
+        console.log(resultado)
+        // console.log(botao)
+    </script>
+</body>
+</html>
