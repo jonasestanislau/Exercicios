@@ -1,4 +1,3 @@
-
 //Selecionando o botão para poder acionar o evento que irá chamar a função
 let btnMostrar = document.getElementById('btnMostrar');
 
@@ -19,11 +18,6 @@ function mostraTabuada() {
                 item.text = `${valor} x ${inicio} = ${valor*inicio}`;
                 tab.appendChild(item)
                 inicio++;
-
-
-
-            // document.write(`${valor} x ${inicio} = ${valor*inicio} <br>`)
-            // resultado = `${valor} x ${inicio} = ${valor*inicio} <br>`;
         }
     }
 }
