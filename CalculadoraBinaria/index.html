@@ -12,19 +12,18 @@
         <h1>Calculadora binária</h1>
     </header>
     <main>
-        <form>
-            <input type="text" id="campoNumero" placeholder="Digite um número:">
-            <fieldset>
-                <legend>Opções de conversão</legend>
-                <label for="convertBIN">
-                    <input type="button" name="optionConvert" id="convertBIN" class="radioButtons" onclick="binario()" value="Binário">
-                </label>
-            </fieldset>
-            <input type="text" placeholder="Resultado" id="campoResultado">
-        </form>
+            <input type="number" name="campoNumero" id="campoNumero" placeholder="Digite um número..."/>
+        <fieldset>
+            <legend>Opções</legend>
+            <button onclick="bin()">Binário</button>
+            <button onclick="oct()">Octal</button>
+            <button onclick="dec()">Decimal</button>
+            <button onclick="hex()">Hexadecimal</button>
+        </fieldset>
+        <div id="campoResultado">------</div>
     </main>
-    <script> 
-
+    <script src="_js/index.js"> 
+        
     </script>
 </body>
 </html>
