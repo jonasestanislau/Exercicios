@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de curtidas</title>
+    <link rel="stylesheet" href="_css/style.css">
+    <script src="https://kit.fontawesome.com/4761a3e379.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="box">
+        <p>"Lorem ipsum dolor sit, adipisicing elit. Laudantium quidem cum ipsam, natus nostrum officiis ex dolores id qui maxime! Eaque fugit impedit voluptatibus a odit, quis qui repellat molestias?"</p>
+        <!-- <span><i class="fa-solid fa-heart"></i></span> -->
+        <span>
+            <p id="contador">0</p>
+            <i class="fa-solid fa-heart" id="icone"></i>
+        </span>
+    </div>
+
+    <script>
+        // Selecionando o elemento
+        const btnCurtir = document.getElementById('icone')
+        const contador = document.getElementById('contador')
+
+        cont = 0;
+        btnCurtir.addEventListener('click',function(){
+            btnCurtir.style.color = '#f45';
+            contador.innerText = cont+1;
+        });
+    </script>
+</body>
+</html>
