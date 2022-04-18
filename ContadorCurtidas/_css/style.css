@@ -12,17 +12,17 @@ body {
     align-items: center;
 }
 
-div#box {
+div.box {
     width: 200px;
     height: auto;
     padding: 20px;
     border-radius: 7px;
-    box-shadow: 0px 0px 10px rgb(219, 219, 219);
+    box-shadow: 0px 0px 10px #dbdbdb;
     display: flex;
     flex-direction: column;
 }
 
-div#box p {
+div.box p {
     font-family: 'Arial',sans-serif;
     font-size: .9rem;
     text-align: justify;
@@ -30,18 +30,25 @@ div#box p {
     letter-spacing: 1px;
 }
 
-div#box span {
+div.box span {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     margin-top: 15px;
     cursor: pointer;
+    gap: 5px;
 }
-div#box span p{
+div.box span p{
     font-size: 1rem;
     margin: 5px;
 }
-div#box span i {
+div.box span i {
     font-size: 1.3rem;
-    color: rgb(252, 189, 194);
+    color: #fcbdc2;
+}
+
+div.expressao {
+    width: 37px;
+    height: 37px;
+    /* background-color: #d09; */
 }
