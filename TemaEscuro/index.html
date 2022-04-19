@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema escuro</title>
+    <style>
+        input[type="checkbox"] {
+            position: absolute;
+            display: block;
+            appearance: none;
+            width: 70px;
+            height: 20px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0px 0px 5px rgb(221, 221, 221);
+            cursor: pointer;
+            transition: .3s;
+        }
+        input[type="checkbox"]::before {
+            content: 'Off';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            top: -2px;
+            left: 4px;
+            background-color: #f45;
+            border-radius: 50%;
+            transition: .3s;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: .7rem;
+        }
+        input[type="checkbox"]:checked {
+            background-color: #f45;
+        }
+        input[type="checkbox"]:checked:before {
+            content: 'On';
+            background-color: #fff;
+            left: 40px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="btn" id="btn">
+
+    <script>
+        let btn = document.getElementById('btn');
+
+        btn.addEventListener('change', function(e){
+            e.preventDefault()
+
+            if(btn.checked == true) {
+                window.document.body.style.background = '#222'
+            }else{
+                window.document.body.style.background = '#fff';
+            }
+        })
+    </script>
+</body>
+</html>
