@@ -10,6 +10,7 @@ input[type="checkbox"] {
     cursor: pointer;
     transition: .3s;
 }
+
 input[type="checkbox"]::before {
     content: 'Off';
     position: absolute;
@@ -17,7 +18,7 @@ input[type="checkbox"]::before {
     height: 25px;
     top: -2px;
     left: 4px;
-    background-color: #09c08c;
+    background-color: #40C9FF;
     border-radius: 50%;
     transition: .3s;
     color: #fff;
@@ -27,11 +28,11 @@ input[type="checkbox"]::before {
     font-size: .7rem;
 }
 input[type="checkbox"]:checked {
-    background-color: #09c08c;
+    background: linear-gradient(to left, #E81CFF, #40C9FF);
 }
 input[type="checkbox"]:checked:before {
     content: 'On';
-    background-color: #fff;
+    background-color: #000;
     left: 20px;
-    color: #888;
+    color: #fff;
 }
