@@ -47,7 +47,8 @@ form input[type="number"],form input[type="text"]{
     border: 1px solid #09c09c;
     border-radius: 5px;
     padding: 5px;
-    color: #888;
+    color: #444;
+    font-weight: 500;
 }
 ::placeholder {
     color: #aaa;

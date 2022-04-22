@@ -7,7 +7,7 @@ let formulario = document.querySelectorAll('input[type="radio"]');
 formulario.forEach(function(item){
     item.addEventListener('change',function(e){
         e.preventDefault();
-        if(inputNumero.value === '') {
+        if(inputNumero.value == '') {
             alert('[ERRO]: O campo número não pode ser vazio! Digite um número para continuar')
         }
         else if(item.value === 'binario'){
