@@ -1,0 +1,99 @@
+/* CSS DOCUMENT */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #09c08c;
+}
+
+div.container {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    background-color: rgba(255, 255, 255, 1);
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 7px;
+}
+div.field-avatar-user {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #09c08c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.field-avatar-user i {
+    font-size: 3rem;
+    color: #fff;
+}
+div.container h2 {
+    font-family: sans-serif;
+    color: #09c08c;
+}
+form.formulario {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+div.inputs {
+    width: 90%;
+    height: auto;
+}
+
+div.inputs span {
+    font-family: sans-serif;
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 500;
+}
+
+input,button[type="submit"] {
+    width: 100%;
+    height: 35px;
+    padding: 10px;
+    margin-top: 10px;
+    color: #444;
+    font-weight: 545;
+    border: 2px solid #999;
+    outline: none;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #09c08c;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-size: 1.1rem;
+    padding-bottom: 30px;
+    border: none;
+}
+
+::placeholder {
+    font-weight: bold;
+}
+
+.inputError {
+    border-color: #f45 !important;
+}
+
+input:focus {
+    border-color: #09c08c;
+    transition: all .5s ease-in;
+}
+
+/* input:invalid {
+    border-color: rgb(148, 74, 62);
+} */
+
+
+
