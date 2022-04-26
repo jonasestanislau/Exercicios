@@ -4,35 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="_css/style.css">
+    <script src="_assets/_js/index.js" defer></script>
+    <link rel="stylesheet" href="_assets/_css/style.css">
     <title>Calculo idade</title>
 </head>
 <body>
-    <header id="cabecalho">
-        <h1>Verificador de idade</h1>
-    </header>
-    <section id="conteudo">
-        <label for="anoNascimento">
-            <span >Ano de nascimento</span >
-            <input type="number" name="inputAnoNasc" id="anoNascimento"/>
-        </label>
-        <div id="sexo">
-            <span>Sexo:</span>
-            <label for="sexoMas">
-                <input type="radio" name="radioSexo" id="sexoMas">
-                Masculino        
-            </label>
-            <label for="sexoFem">
-                <input type="radio" name="radioSexo" id="sexoFem">
-                Feminino        
-            </label>
-        </div>
-        <button id="btnVerificar">Verificar</button>
-        <p id="resultado"></p>
-    </section>
-    <footer id="rodape">
-        <p>&copy;Exercícios - by cursoemvídeo</p>
-    </footer>
-    <script src="_js/index.js"></script>
+    <div id="container">
+        <header id="cabecalho">
+            <h3>Verificador de idade</h3>
+        </header>
+        <section id="conteudo">
+            <form action="">
+                <input type="number" name="inputAnoNasc" id="anoNascimento" min="0" placeholder="Digite seu ano de nascimento"/>
+                <span class="resultado"></span>
+                <button id="btnVerificar" type="submit">Verificar</button>
+            </form>
+        </section> 
+    </div>   
 </body>
 </html>
