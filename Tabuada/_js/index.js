@@ -1,29 +1,22 @@
-//Selecionando o botão para poder acionar o evento que irá chamar a função
-let btnMostrar = document.getElementById('btnMostrar');
+// Selecionando o button
+const form = document.querySelectorAll('form')
 
-function mostraTabuada() {
-    let numeroTabuada = document.getElementById('numeroTabuada');
-    let tab = document.getElementById('seltab');
+btnMostrar.addEventListener('click', (e) => {
+    e.preventDefault();// stop no form
     
-
-    if(numeroTabuada.value.length == 0) {
-        alert("[ERRO], digite um número para prosseguir!")
+    if(inputNumber == '') {// verificar se o campo number está vázio
+        alert('[ERROR] O campo número não pode ser vazio!')
     }
     else {
-        let valor = Number(numeroTabuada.value);
-        let inicio = 1;
-        tab.innerHTML = '';
-        while(inicio <= 10) {
-                let item = document.createElement('option');
-                item.text = `${valor} x ${inicio} = ${valor*inicio}`;
-                tab.appendChild(item)
-                inicio++;
+        let contador = 1;
+        const areaResultado = document.querySelector('#areaResultado');// div resultado
+
+        while(contador <= 10) {
+            areaResultado.innerHTML += `${inputNumber.value} x ${contador} = ${inputNumber.value*contador}<br/>`;
+            contador++;
         }
     }
-}
-
-// Evento que chama a função quando o botão é clicado
-btnMostrar.addEventListener('click',mostraTabuada);
+})
 
 
 

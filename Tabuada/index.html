@@ -5,25 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="_css/style.css">
+    <script src="_js/index.js" defer></script>
     <title>Tabuada</title>
 </head>
 <body>
-    <header id="cabecalho">
-        <h1>Tabuada</h1>
-    </header>
-    <section id="conteudo">
-        <label for="numeroTabuada">
-            <span >Digite um número:</span >
-            <input type="number" name="campoNumero" id="numeroTabuada"/>
-        </label>
-        <button id="btnMostrar">Mostrar</button>
-        <div id="resultado">
-            <select name="tabuada" id="seltab" size="10"></select>
-        </div>
-    </section>
-    <footer id="rodape">
-        <p>&copy;&nbsp;Exercícios</p>
-    </footer>
-    <script src="_js/index.js"></script>
+    <div id="container">
+        <header id="cabecalho">
+            <h1>Tabuada</h1>
+        </header>
+        <form action="" id="formulario">
+            <input type="number" name="inputNumber" id="inputNumber" min="0" placeholder="Digite um número">
+            <div id="areaResultado"></div>
+            <button id="btnMostrar" type="submit">Mostrar</button>
+        </form>
+    </div>
 </body>
 </html>
